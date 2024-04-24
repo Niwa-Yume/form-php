@@ -3,7 +3,7 @@
 $host = '127.0.0.1';  // Modifié de 'localhost' à '127.0.0.1'
 $dbname = 'tp-php';
 $username = 'root';
-$password = 'root';
+$password = '';
 
 function prepareInput($input) {
     return htmlspecialchars(stripslashes(trim($input)));
@@ -31,7 +31,7 @@ try {
         echo "Erreur : Les champs suivants sont requis et manquants : $missingFieldsList.";
     } else {
         $stmt = $pdo->prepare("INSERT INTO movies (title, year, imdb_rating, actors, image, user_rating, user_comment) VALUES (:title, :year, :imdb_rating, :actors, :image, :user_rating, :user_comment)");
-        $stmt->bindParam(':title', $_POST['title']);
+        $stmt->bindParam(':title', $_POST['title']);//
         $stmt->bindParam(':year', $_POST['year']);
         $stmt->bindParam(':imdb_rating', $_POST['rating']);
         $stmt->bindParam(':actors', $_POST['actors']);
@@ -41,6 +41,8 @@ try {
         $stmt->execute();
 
         echo "Les informations ont été enregistrées avec succès.";
+        //lien qui redirige vers la page d'accueil
+        echo "<a href='index.php'>Retour à l'accueil</a>";
     }
 
 } catch (PDOException $e) {

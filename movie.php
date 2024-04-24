@@ -2,6 +2,11 @@
 // Initialisation de la variable $year pour éviter l'erreur si elle n'est pas définie par la suite
 $year = 'Année non disponible'; 
 
+$host = '127.0.0.1';  // Modifié de 'localhost' à '127.0.0.1'
+$dbname = 'tp-php';
+$username = 'root';
+$password = 'root';
+
 if (isset($_GET['url'])) {
     $url = filter_var($_GET['url'], FILTER_SANITIZE_URL);
     $opts = ["http" => ["method" => "GET", "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36\r\n"]];
