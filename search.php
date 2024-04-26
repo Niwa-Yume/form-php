@@ -1,4 +1,43 @@
 <?php
+echo '<style>
+    body {
+        background-color: #f4e9d8;
+        color: #5a4634;
+        font-family: \'Arial\', sans-serif;
+    }
+    h2 {
+        color: #d3ad7f;
+        font-family: \'Helvetica\', sans-serif;
+    }
+    ul {
+        list-style-type: none; /* Pas de puces */
+        padding: 0;
+    }
+    li {
+        background-color: #fffaf3;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    img {
+        border-radius: 5px;
+        width: 80px;
+        height: auto;
+    }
+    a {
+        color: #b39269;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>';
+?>
+
+
+<?php
 // search.php
 if (isset($_GET['keyword'])) {
     $keyword = urlencode($_GET['keyword']);  // Encode le mot clé pour utilisation dans une URL

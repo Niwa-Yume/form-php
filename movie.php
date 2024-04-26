@@ -1,3 +1,50 @@
+ <?php
+ echo '<style>
+     body {
+         background-color: #f4e9d8; /* Couleur sable clair */
+         color: #5a4634; /* Couleur terre foncée */
+         font-family: \'Arial\', sans-serif;
+     }
+     h1 {
+         color: #d3ad7f; /* Couleur sable plus foncé */
+         font-family: \'Helvetica\', sans-serif;
+     }
+     img {
+         display: block;
+         margin: auto;
+         width: 200px;
+         height: auto;
+         border-radius: 10px;
+     }
+     form {
+         background-color: #fffaf3;
+         padding: 20px;
+         margin-top: 20px;
+         border-radius: 8px;
+         box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+     }
+     input[type="number"], textarea {
+         width: 100%;
+         padding: 8px;
+         border: 1px solid #d3ad7f;
+         border-radius: 4px;
+         margin-top: 10px;
+     }
+     input[type="submit"] {
+         background-color: #b39269;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+     input[type="submit"]:hover {
+         background-color: #9c7c53;
+     }
+ </style>';
+ ?>
+
+
 <?php
 // Initialisation de la variable $year pour éviter l'erreur si elle n'est pas définie par la suite
 $year = 'Année non disponible'; 
