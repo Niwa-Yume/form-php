@@ -4,6 +4,8 @@
 ## 🛠️ Tech Stack
 - [PHP](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [CSS](https://tailwindcss.com/)
+- [HTML](https://tailwindcss.com/)
     
 
 ## 🧐 Features    
