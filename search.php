@@ -1,43 +1,48 @@
 <?php
+echo '<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">';
 echo '<style>
     body {
-        background-color: #f4e9d8;
-        color: #5a4634;
-        font-family: \'Arial\', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     h2 {
-        color: #d3ad7f;
-        font-family: \'Helvetica\', sans-serif;
+        color: #5a76a8;
+        font-family: "Roboto", sans-serif;
     }
     ul {
-        list-style-type: none; /* Pas de puces */
+        list-style-type: none;
         padding: 0;
     }
     li {
-        background-color: #fffaf3;
+        background-color: #ffffff;
         margin: 10px 0;
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
     }
     img {
         border-radius: 5px;
         width: 80px;
         height: auto;
+        margin-right: 15px;
     }
     a {
-        color: #b39269;
+        color: #5a76a8;
         text-decoration: none;
         font-weight: bold;
+        transition: color 0.3s;
     }
     a:hover {
+        color: #4872a3;
         text-decoration: underline;
     }
 </style>';
-?>
-
-
-<?php
 // search.php
 if (isset($_GET['keyword'])) {
     $keyword = urlencode($_GET['keyword']);  // Encode le mot clé pour utilisation dans une URL

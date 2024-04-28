@@ -31,7 +31,7 @@ try {
         echo "Erreur : Les champs suivants sont requis et manquants : $missingFieldsList.";
     } else {
         $stmt = $pdo->prepare("INSERT INTO movies (title, year, imdb_rating, actors, image, user_rating, user_comment) VALUES (:title, :year, :imdb_rating, :actors, :image, :user_rating, :user_comment)");
-        $stmt->bindParam(':title', $_POST['title']);//
+        $stmt->bindParam(':title', $_POST['title']);
         $stmt->bindParam(':year', $_POST['year']);
         $stmt->bindParam(':imdb_rating', $_POST['rating']);
         $stmt->bindParam(':actors', $_POST['actors']);
@@ -40,9 +40,9 @@ try {
         $stmt->bindParam(':user_comment', $_POST['user_comment']);
         $stmt->execute();
 
-        echo "Les informations ont été enregistrées avec succès.";
-        //lien qui redirige vers la page d'accueil
-        echo "<a href='index.php'>Retour à l'accueil</a>";
+        echo "Les informations ont été enregistrées avec succès. <br>";
+        // Lien stylisé comme un bouton
+        echo "<a href='index.php' style='text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px; font-weight: bold; margin-top: 20px;'>Retour à l'accueil</a>";
     }
 
 } catch (PDOException $e) {

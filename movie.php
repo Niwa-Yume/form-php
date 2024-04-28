@@ -1,51 +1,59 @@
  <?php
+ echo '<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">';
  echo '<style>
-     body {
-         background-color: #f4e9d8; /* Couleur sable clair */
-         color: #5a4634; /* Couleur terre foncée */
-         font-family: \'Arial\', sans-serif;
-     }
-     h1 {
-         color: #d3ad7f; /* Couleur sable plus foncé */
-         font-family: \'Helvetica\', sans-serif;
-     }
-     img {
-         display: block;
-         margin: auto;
-         width: 200px;
-         height: auto;
-         border-radius: 10px;
-     }
-     form {
-         background-color: #fffaf3;
-         padding: 20px;
-         margin-top: 20px;
-         border-radius: 8px;
-         box-shadow: 0 2px 5px rgba(0,0,0,0.1)
-     }
-     input[type="number"], textarea {
-         width: 100%;
-         padding: 8px;
-         border: 1px solid #d3ad7f;
-         border-radius: 4px;
-         margin-top: 10px;
-     }
-     input[type="submit"] {
-         background-color: #b39269;
-         color: white;
-         padding: 10px 20px;
-         border: none;
-         border-radius: 5px;
-         cursor: pointer;
-     }
-     input[type="submit"]:hover {
-         background-color: #9c7c53;
-     }
- </style>';
- ?>
+    body {
+        background-color: #f7f7f7;
+        color: #333;
+        font-family: \'Roboto\', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+    h1, p {
+        text-align: center;
+        max-width: 600px;
+    }
+    img {
+        display: block;
+        margin: 20px auto;
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    form {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    input[type="number"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>';
 
-
-<?php
 // Initialisation de la variable $year pour éviter l'erreur si elle n'est pas définie par la suite
 $year = 'Année non disponible'; 
 
